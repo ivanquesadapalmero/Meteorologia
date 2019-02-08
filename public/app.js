@@ -5,9 +5,9 @@
    */
 
 
-let colecciones = {
-    previsiones: { precipitacion: 'boolean', temeperatura: 'number', nubosidad: 'number' },
-    municipios: { nombre: 'string', latitud: 'number', altitud: 'number' }
+  let colecciones = {
+    articulos: { nombre: 'string', precio: 'number' },
+    clientes: { nombre: 'string', apellidos: 'string' }
 };
 
 let index = `
@@ -19,8 +19,8 @@ let index = `
          <br>
          <ul style="padding-left: 50px">
            <li><b>Inicio</b>: Esta página con información.</li>
-           <li><b>Previsiones</b>: Permite realizar operaciones CRUD sobre las Previsiones de la BD. </li>
-           <li><b>Municipios</b>: Permite realizar operaciones CRUD sobre los Municipios de la BD.</li>
+           <li><b>Artículos</b>: Permite realizar operaciones CRUD sobre los artículos de la BD. </li>
+           <li><b>Clientes</b>: Permite realizar operaciones CRUD sobre los clientes de la BD.</li>
          </ul>
      </div>`;
 
@@ -29,8 +29,8 @@ let index = `
 window.addEventListener('load', function () {
 
     let i = document.getElementById('inicio');
-    let a = document.getElementById('previsiones');
-    let c = document.getElementById('municipios');
+    let a = document.getElementById('articulos');
+    let c = document.getElementById('clientes');
 
     i.innerHTML = index;
     i.style.display = 'block';
@@ -41,15 +41,15 @@ window.addEventListener('load', function () {
         c.style.display = 'none';  c.innerHTML = '';       
     });
 
-    document.getElementById('menu-previsiones').addEventListener('click', function (e) {
-        verDocumentos('previsiones');
+    document.getElementById('menu-articulos').addEventListener('click', function (e) {
+        verDocumentos('articulos');
         a.style.display = 'block';
         i.style.display = 'none';
         c.style.display = 'none';  c.innerHTML = '';       
     });
 
-    document.getElementById('menu-municipios').addEventListener('click', function (e) {
-        verDocumentos('municipios');
+    document.getElementById('menu-clientes').addEventListener('click', function (e) {
+        verDocumentos('clientes');
         c.style.display = 'block';
         i.style.display = 'none';  
         a.style.display = 'none';  a.innerHTML = '';
@@ -147,11 +147,6 @@ function eliminar(coleccion, id) {
  FUNCIONES AUXILIARES 
 --------------------*/
 
-function entradaOK() {
-    return true;
-}
-
-
 // Función para CONVERTIR JSON A TABLA HTML
 function json2table(collection, jsonData, classes) {
 
@@ -175,8 +170,7 @@ function json2table(collection, jsonData, classes) {
 <button class="insertar" title="Insertar" onclick="
     insertar('${collection}',  { 
         ${colNames[0]}: document.getElementById('${collection}.${colNames[0]}').value,
-        ${colNames[1]}: document.getElementById('${collection}.${colNames[1]}').value,
-        ${colNames[2]}: document.getElementById('${collection}.${colNames[2]}').value
+        ${colNames[1]}: document.getElementById('${collection}.${colNames[1]}').value
     }) ">
 <span>✏️</span>
 </button>
@@ -186,8 +180,7 @@ function json2table(collection, jsonData, classes) {
 <button class="modificar" title="Modificar" onclick="
     modificar ('${collection}', '${fila._id}', {
         ${colNames[0]}: document.getElementById('${fila._id}.${colNames[0]}').value, 
-        ${colNames[1]}: document.getElementById('${fila._id}.${colNames[1]}').value,
-        ${colNames[2]}: document.getElementById('${fila._id}.${colNames[2]}').value
+        ${colNames[1]}: document.getElementById('${fila._id}.${colNames[1]}').value 
     }) ">
 <span>📝</span>
 </button>
