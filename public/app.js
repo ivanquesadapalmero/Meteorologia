@@ -6,15 +6,15 @@
 
 
   let colecciones = {
-    previsiones: { nombre: 'string', precio: 'number' },
-    municipios: { nombre: 'string', apellidos: 'string' }
+    previsiones: { precipitacion: 'boolean', temperatura: 'number', nubosidad: 'number'},
+    municipios: { nombre: 'string', latitud: 'number', altitud: 'number'}
 };
 
 let index = `
      <div style="margin: 50px">
          <h1>Tiendaw</h1>
          <small><b>Ejemplo didáctico: PWA y Fullstack MEN (MongoDB + Express + NodeJS) </b></small>
-         <br><br>
+         <br><br>1
          <p>Esta SPA (Single Page Application) ofrece 3 opciones:</p>
          <br>
          <ul style="padding-left: 50px">
@@ -170,7 +170,8 @@ function json2table(collection, jsonData, classes) {
 <button class="insertar" title="Insertar" onclick="
     insertar('${collection}',  { 
         ${colNames[0]}: document.getElementById('${collection}.${colNames[0]}').value,
-        ${colNames[1]}: document.getElementById('${collection}.${colNames[1]}').value
+        ${colNames[1]}: document.getElementById('${collection}.${colNames[1]}').value,
+        ${colNames[2]}: document.getElementById('${collection}.${colNames[2]}').value
     }) ">
 <span>✏️</span>
 </button>
@@ -180,7 +181,8 @@ function json2table(collection, jsonData, classes) {
 <button class="modificar" title="Modificar" onclick="
     modificar ('${collection}', '${fila._id}', {
         ${colNames[0]}: document.getElementById('${fila._id}.${colNames[0]}').value, 
-        ${colNames[1]}: document.getElementById('${fila._id}.${colNames[1]}').value 
+        ${colNames[1]}: document.getElementById('${fila._id}.${colNames[1]}').value,
+        ${colNames[2]}: document.getElementById('${fila._id}.${colNames[2]}').value 
     }) ">
 <span>📝</span>
 </button>
