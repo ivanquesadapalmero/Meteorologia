@@ -194,12 +194,12 @@ label#menu-inicio-label > span::after {
   content: " Inicio"; 
 }
 
-label#menu-articulos-label > span::after {
+label#menu-previsiones-label > span::after {
   content: " Artículos"; 
 }
 
-label#menu-clientes-label > span::after {
-  content: " Clientes"; 
+label#menu-municipios-label > span::after {
+  content: " municipios"; 
 }
 
 
@@ -275,10 +275,10 @@ DISEÑO DE TABLAS ADAPTATIVO
   padding: 4px 8px;
 }
 
-.sort-table th.articulos-nombre,
-.sort-table th.articulos-precio,
-.sort-table th.clientes-nombre,
-.sort-table th.clientes-apellidos
+.sort-table th.previsiones-nombre,
+.sort-table th.previsiones-precio,
+.sort-table th.municipios-nombre,
+.sort-table th.municipios-apellidos
  {
   width: 30% !important;
 }
@@ -287,14 +287,14 @@ DISEÑO DE TABLAS ADAPTATIVO
   width: 40% !important;
 }
 
-.sort-table .articulos-nombre,
-.sort-table .clientes-nombre  
+.sort-table .previsiones-nombre,
+.sort-table .municipios-nombre  
 {
   font-weight: bold;
 }
 
-.sort-table .articulos-nombre small,
-.sort-table .clientes-nombre small {
+.sort-table .previsiones-nombre small,
+.sort-table .municipios-nombre small {
   font-weight: normal;
 }
 
@@ -302,8 +302,8 @@ DISEÑO DE TABLAS ADAPTATIVO
 /* Responsive table full */
 @media (max-width: 767px) {
   label#menu-inicio-label    > span::after,
-  label#menu-articulos-label > span::after,
-  label#menu-clientes-label  > span::after 
+  label#menu-previsiones-label > span::after,
+  label#menu-municipios-label  > span::after 
   {
     content: none; 
   }
@@ -396,29 +396,29 @@ DISEÑO DE TABLAS ADAPTATIVO
     padding: 10px;
   }
 
-  .sort-table th.articulos-nombre,
-  .sort-table th.articulos-precio,
-  .sort-table th.clientes-nombre,
-  .sort-table th.clientes-apellidos,
+  .sort-table th.previsiones-nombre,
+  .sort-table th.previsiones-precio,
+  .sort-table th.municipios-nombre,
+  .sort-table th.municipios-apellidos,
   .sort-table th.operacion {
     width: 100px !important;
   }
 
-  .sort-table td.articulos-nombre:before,
-  .sort-table td.clientes-nombre:before
+  .sort-table td.previsiones-nombre:before,
+  .sort-table td.municipios-nombre:before
   {
     display: none;
   }
 
-  .sort-table td.articulos-nombre,
-  .sort-table td.clientes-nombre
+  .sort-table td.previsiones-nombre,
+  .sort-table td.municipios-nombre
   {
     letter-spacing: .03em;
     padding-left: 14px;
   }
 
-  .sort-table td.articulos-nombre > input 
-  .sort-table td.clientes-nombre > input
+  .sort-table td.previsiones-nombre > input 
+  .sort-table td.municipios-nombre > input
   {
     font-weight:bold;
   }
