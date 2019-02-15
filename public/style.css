@@ -195,11 +195,11 @@ label#menu-inicio-label > span::after {
 }
 
 label#menu-previsiones-label > span::after {
-  content: " Artículos"; 
+  content: " Previsiones"; 
 }
 
 label#menu-municipios-label > span::after {
-  content: " municipios"; 
+  content: " Municipios"; 
 }
 
 

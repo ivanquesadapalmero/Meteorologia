@@ -19,7 +19,7 @@ let index = `
          <br>
          <ul style="padding-left: 50px">
            <li><b>Inicio</b>: Esta página con información.</li>
-           <li><b>Artículos</b>: Permite realizar operaciones CRUD sobre los artículos de la BD. </li>
+           <li><b>Previsiones</b>: Permite realizar operaciones CRUD sobre los previsiones de la BD. </li>
            <li><b>municipios</b>: Permite realizar operaciones CRUD sobre los municipios de la BD.</li>
          </ul>
      </div>`;
@@ -69,7 +69,7 @@ function verDocumentos(coleccion) {
         })
         .then(res => res.json())
         .then(data => {
-            document.getElementById(`${coleccion}`).innerHTML
+            document.getElementById(`${coleccion}`).innerHTML 
                 = json2table(coleccion, data, "table-responsive-full sort-table")
         })
 
@@ -150,6 +150,7 @@ function eliminar(coleccion, id) {
 // Función para CONVERTIR JSON A TABLA HTML
 function json2table(collection, jsonData, classes) {
 
+    console.table(jsonData);
     classes = classes || '';
 
     let colNames = Object.keys(colecciones[collection]);
@@ -223,6 +224,7 @@ function json2table(collection, jsonData, classes) {
             : documento[campo]}" 
     >
 </td>`;
+
 
 
     let table = `
