@@ -12,15 +12,15 @@
 
 let index = `
      <div style="margin: 50px">
-         <h1>Tiendaw</h1>
+         <h1>Meteorología</h1>
          <small><b>Ejemplo didáctico: PWA y Fullstack MEN (MongoDB + Express + NodeJS) </b></small>
-         <br><br>1
+         <br><br>
          <p>Esta SPA (Single Page Application) ofrece 3 opciones:</p>
          <br>
          <ul style="padding-left: 50px">
            <li><b>Inicio</b>: Esta página con información.</li>
            <li><b>Previsiones</b>: Permite realizar operaciones CRUD sobre los previsiones de la BD. </li>
-           <li><b>municipios</b>: Permite realizar operaciones CRUD sobre los municipios de la BD.</li>
+           <li><b>Municipios</b>: Permite realizar operaciones CRUD sobre los municipios de la BD.</li>
          </ul>
      </div>`;
 

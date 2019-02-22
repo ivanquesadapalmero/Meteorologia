@@ -37,7 +37,7 @@ body {
 nav {  
   padding: 10px;
   _background-color: var(--bgcolor-menu);
-  background-color: #2196f3;
+  background-color:green;
   width: 100%;
   position: fixed;
   font-weight: bolder;
@@ -146,8 +146,8 @@ button.insertar {
 }
 
 button.modificar {
-  border: 1px solid #0085a6;
-  color: #0085a6;
+  border: 1px solid green;
+  color: green;
   content: " Modificar"; 
 }
 
@@ -228,8 +228,8 @@ DISEÑO DE TABLAS ADAPTATIVO
     width:100%; 
     max-width:100%;
   }
-  table thead tr {border-bottom:3px solid #0085a6; color:#000;}
-  table tfoot tr {border-top:3px solid #0085a6;}
+  table thead tr {border-bottom:3px solid green; color:#000;}
+  table tfoot tr {border-top:3px solid green;}
   table thead th, table tfoot th {
     background-color:#fff;
     color:#000;
@@ -356,7 +356,7 @@ DISEÑO DE TABLAS ADAPTATIVO
 
   .table-responsive-full td:first-child {
     border-top: 1px solid #bfbfbf;
-    border-bottom: 3px solid #0085a6;
+    border-bottom: 3px solid green;
     border-radius: 4px 4px 0 0;
     color: #000;
     font-size: 1.11111em;
