@@ -13,6 +13,13 @@ mongoose.connect(config.db_uri, { useNewUrlParser: true })
     .catch(err => console.log('Error en la conexion a la BD'));
 
 // --- MIDDLEWARE
+// Para redirigir trafico HTTP a HTTPS
+app.use((req, res, next) => {
+  if (req.header('x-forwarded-proto') !== 'https')
+    res.redirect(`https://${req.header('host')}${req.url}`);
+  else
+    next();
+});
 //Json
 app.use(express.json());
 // Rutas
