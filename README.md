@@ -1,6 +1,8 @@
 # Meteorologia
 ## PWA + FullStack(MongoDB, Expresss,NodeJS)
 
+Aplicación web para la gestión de previsiones meteorologicas y municipios en los que se dan dichas previsiones.
+
 ## Archivos Necesarios
 
 ### Backend
