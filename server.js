@@ -15,7 +15,7 @@ mongoose.connect(config.db_uri, { useNewUrlParser: true })
 // --- MIDDLEWARE
 // Para redirigir trafico HTTP a HTTPS
 app.use((req, res, next) => {
-  if (req.header('x-forwarded-proto') !== 'https')
+  if (req.header('x-forwarded-proto') !== 'https' && process.env.PORT)
     res.redirect(`https://${req.header('host')}${req.url}`);
   else
     next();
@@ -30,5 +30,5 @@ app.use(express.static(path.join(__dirname , 'public')));
 app.use(morgan('dev'));
 
 // --- PUERTO DE ESCUCHA
-app.listen (config.port, () => console.log('Servidor iniciado en el puerto 3000'));
+app.listen (config.port, () => console.log('Servidor iniciado en el puerto ' + config.port));
 
