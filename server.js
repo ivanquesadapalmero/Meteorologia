@@ -20,12 +20,15 @@ app.use((req, res, next) => {
   else
     next();
 });
+
+//Archivos estáticos. Deberá crear un archivo public/index.html
+app.use(express.static(path.join(__dirname , 'public')));
+
+
 //Json
 app.use(express.json());
 // Rutas
 app.use ('/api', routes);
-//Archivos estáticos. Deberá crear un archivo public/index.html
-app.use(express.static(path.join(__dirname , 'public')));
 // Logger
 app.use(morgan('dev'));
 
